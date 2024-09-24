@@ -4,6 +4,7 @@ import { Models } from "appwrite";
 import { useGetRecentPosts, useGetUsers } from "@/lib/react-query/queriesAndMutations";
 import PostCard from "@/components/shared/PostCard";
 import { Loader } from "lucide-react";
+import { UserCard } from "@/components/shared";
 
 const Home = () => {
   // const { toast } = useToast();
@@ -51,7 +52,7 @@ const Home = () => {
         </div>
       </div>
 
-      {/* <div className="home-creators">
+      <div className="home-creators">
         <h3 className="h3-bold text-light-1">Top Creators</h3>
         {isUserLoading && !creators ? (
           <Loader />
@@ -64,7 +65,7 @@ const Home = () => {
             ))}
           </ul>
         )}
-      </div> */}
+      </div>
     </div>
   );
 };
