@@ -1,9 +1,10 @@
+import { useUserContext } from '@/context/AuthContext';
 import { Outlet, Navigate} from 'react-router-dom';
 
 
 // Gives different layout depending on whether user is authenticated
 const AuthLayout = () => {
-  const isAuthenticated = false;
+  const isAuthenticated = useUserContext();
 
   return (
     <>
